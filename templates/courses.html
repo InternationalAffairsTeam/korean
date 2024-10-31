@@ -1,0 +1,9 @@
+<h2>Select Course to Register</h2>
+<form action="/register_course" method="post">
+    <button type="submit" name="course" value="Korean 1">Korean 1</button>
+    <button type="submit" name="course" value="Korean 2">Korean 2</button>
+</form>
+<br>
+{% if session.get('username') == 'klc' %}
+<a href="/export">View Registrations</a>
+{% endif %}

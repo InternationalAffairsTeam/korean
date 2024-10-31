@@ -1,0 +1,14 @@
+<form action="/signup" method="post">
+    <label>Username: <input type="text" name="username"></label><br>
+    <label>Password: <input type="password" name="password"></label><br>
+    <label>Name: <input type="text" name="name"></label><br>
+    <label>Student ID: <input type="text" name="student_id"></label><br>
+    <button type="submit">Sign Up</button>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="{{ category }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</form>
