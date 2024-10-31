@@ -3,3 +3,4 @@ flask_sqlalchemy
 pandas
 xlsxwriter
 gunicorn
+pg8000
